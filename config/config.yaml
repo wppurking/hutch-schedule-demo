@@ -1,0 +1,4 @@
+mq_username: wyatt
+mq_password: 616
+consumer_pool_size: 25
+log_level: debug
