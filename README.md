@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Changed files:
+1. config/initializers/z-001-hutch.rb: to initlize Hutch and Hutch::Schedule
+2. app/jobs/plan_job.rb: to test job with ActiveJob error retry.
+3. app/jobs/bow_job.rb: to test ActiveJob use hutch to driver it. 
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Use
+1. `hutch --config config/config.yaml` to run hutch process.
+2. `rails c` to enqueue message with:
+  - `BowJob.perform_later(a: 1)
