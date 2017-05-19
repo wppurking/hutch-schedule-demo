@@ -8,8 +8,9 @@ Changed files:
 
 
 # Use
-1. `hutch -v` to run hutch process.
-2. `rails c` to enqueue message with:
+1. `docker-compose up`: launch rabbitmq
+2. `hutch -v` to run hutch process.
+3. `rails c` to enqueue message with:
   - `BowJob.set(wait: 5.seconds).perform_later(a: 1)`
   - `PlanJob.perform_later(b: 2)` will retry 5 times with exponentially_longer delay algorithm.
 
