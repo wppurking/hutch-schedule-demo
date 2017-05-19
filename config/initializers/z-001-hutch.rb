@@ -1,9 +1,5 @@
-Hutch::Config.load_from_file(Rails.root.join('config', 'config.yaml'))
-
-# used for hutch command
-Hutch::Config.setup_procs  << Proc.new {
-	Hutch::Schedule.connect(Hutch.broker)
-}
+# load all activejob class
+puts Hutch::Config.load_from_file(Rails.root.join('config', 'config.yaml'))
+Hutch::Config.error_handlers = [Hutch::ErrorHandlers::MaxRetry.new]
 Hutch.connect
-# init with rails to enqueue scheulde message
-Hutch::Schedule.connect(Hutch.broker) if Hutch::Schedule.core.blank?
+Hutch::Schedule.connect
