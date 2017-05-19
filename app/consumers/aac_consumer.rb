@@ -1,8 +1,8 @@
-class AbcJob
+class AacConsumer
 	include Hutch::Consumer
 	include Hutch::Enqueue
 	
-	consume 'bbc_job', 'abc_job'
+	consume 'consumer.bbc', 'consumer.aac'
 	attempts 3
 
 	def process(m)
