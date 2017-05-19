@@ -6,6 +6,6 @@ class AacConsumer
 	attempts 3
 
 	def process(m)
-		raise "Error #{m.properties.to_json}"
+		#raise "Error #{m.properties.to_json}"
 	end
 end

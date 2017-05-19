@@ -6,6 +6,6 @@ class BbcConsumer
 	attempts 2
 
 	def process(m)
-		raise "BBC ERROR"
+		#raise "BBC ERROR"
 	end
 end
