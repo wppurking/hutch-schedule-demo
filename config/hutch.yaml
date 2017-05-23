@@ -1,0 +1,2 @@
+consumer_pool_size: 15
+channel_prefetch: 10
