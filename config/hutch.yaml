@@ -3,7 +3,7 @@ channel_prefetch: 30
 enable_http_api_use: false
 uri: amqp://guest:guest@127.0.0.1:5672/ajd
 mq_verify_peer: false
-log_level: info
 #mq_tls: true
 
 redis_url: redis:://127.0.0.1/0
+worker_pool_size: 10
