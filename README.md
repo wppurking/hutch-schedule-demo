@@ -3,9 +3,11 @@
 Changed files:
 1. `config/application.rb`: use Hutch Adapter
 1. `config/initializers/z-001-hutch.rb`: to initlize Hutch and Hutch::Schedule
-2. `app/jobs/plan_job.rb`: to test job with ActiveJob error retry.
-3. `app/jobs/bow_job.rb`: to test ActiveJob use hutch to driver it. 
-
+1. `app/jobs/plan_job.rb`: to test job with ActiveJob error retry.
+1. `app/jobs/bow_job.rb`: to test ActiveJob use hutch to driver it. 
+1. `app/consumers/aac_consumer.rb`: have threshold and consume two routing keys
+1. `app/consume/bbc_consumer.rb`: normal hutch consumer
+1. 'config/hutch.yaml': Hutch Config file
 
 # Use
 1. `docker-compose up`: launch rabbitmq

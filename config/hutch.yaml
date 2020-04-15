@@ -1,8 +1,9 @@
-consumer_pool_size: 30
-channel_prefetch: 60
+consumer_pool_size: 2
+channel_prefetch: 30
 enable_http_api_use: false
-#uri: amqp://admin:BFngr5e4@43.241.238.21:5671/dev
-uri: amqp://guest:guest@127.0.0.1:5672/event
+uri: amqp://guest:guest@127.0.0.1:5672/ajd
 mq_verify_peer: false
-#uri: amqp://tmxvxzov:HLY9xLCARLJkVhUelinyNl70r4n9Oi3j@white-mynah-bird.rmq.cloudamqp.com:5671/tmxvxzov
+log_level: info
 #mq_tls: true
+
+redis_url: redis:://127.0.0.1/0
