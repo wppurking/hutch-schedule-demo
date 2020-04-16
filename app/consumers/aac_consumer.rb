@@ -4,9 +4,8 @@ class AacConsumer
   
   consume 'consumer.bbc', 'consumer.aac'
   attempts 3
-  threshold rate: 1, interval: 1
   
   def process(msg)
-    logger.info "#{Thread.current.name} - aac"
+    puts "#{Thread.current.name} - aac #{msg}" unless msg.body.blank?
   end
 end
